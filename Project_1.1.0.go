@@ -93,7 +93,7 @@ func main() {
 	if len(exampleParts) != 3 {
 		panic("Формат ввода не удовлетворяет заданию — два операнда и один оператор, разделенный единичными пробелами (+, -, /, *). Пример корректной записи: 1 + 2")
 	}
-	if (!checkOperators(exampleParts[1])) || (strings.Count(example, " ") != 2) {
+	if !checkOperators(exampleParts[1]) {
 		panic("Формат ввода не удовлетворяет заданию — два операнда и один оператор, разделенный единичными пробелами (+, -, /, *). Пример корректной записи: 1 + 2")
 	} else if (defineRomeNumbers(exampleParts[0]) == true) || (defineRomeNumbers(exampleParts[2]) == true) {
 		if (defineRomeNumbers(exampleParts[0]) == true) && (defineRomeNumbers(exampleParts[2]) == true) {
