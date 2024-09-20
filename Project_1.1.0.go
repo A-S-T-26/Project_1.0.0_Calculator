@@ -39,8 +39,8 @@ func checkOperators(operator string) bool {
 }
 
 func defineRomeNumbers(number string) bool {
-	for key, _ := range RomeToArabNumbers {
-		if key == number {
+	for key, value := range RomeToArabNumbers {
+		if (key == number) && (value < 11) {
 			return true
 		}
 	}
